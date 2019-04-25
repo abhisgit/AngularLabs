@@ -1,0 +1,52 @@
+// All commands
+
+// Check node.js and npm version using command
+node –v
+npm -v
+
+
+// Using a node.js installer to install both node.js and npm 
+https://nodejs.org/en/download/
+
+
+// Install or update npm using command: 
+npm install –g npm
+
+
+// Check angular CLI version using command: 
+ng version
+
+
+// Install angular CLI using command: 
+npm install -g @angular/cli
+
+// Install typescript using running command
+npm install –g typescript
+
+
+// Download and install visual studio code 
+https://code.visualstudio.com/download 
+
+
+// Create angular application using command: 
+ng new <app-name>
+
+
+// Go to the app directory and install packages in angular application using command: 
+npm install
+
+
+// Build angular application using command: 
+ng build
+
+
+// Serve or run angular application using command: 
+ng server -o
+
+
+// Generate a new module
+ng g m <module-name>
+
+
+// Generate a new component
+ng g c <component-name>
