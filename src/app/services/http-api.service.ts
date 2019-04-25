@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable()
+export class HttpApiService {
+
+  constructor(private http: HttpClient) { }
+
+  getData(): Observable<any> {
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  }
+
+}

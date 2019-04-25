@@ -1,3 +1,30 @@
 <p>
   products works!
 </p>
+
+<div>
+  <table style="width:100%; text-align: center">
+    <tbody>
+      <tr>
+        <th>Product Id</th>
+        <th>Product Code</th>
+        <th>Product Description</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+        <th>Rating</th>
+        <th>Comments</th>
+      </tr>
+      <tr *ngFor='let product of productsList'>
+        <td><a routerLink="/products/{{product.id}}">{{ product.id }}</a></td>
+        <td>{{ product.code }}</td>
+        <td><button (click)="gotoProductDetails(product.id)">{{ product.description }}</button></td>
+        <td>{{ product.quantity }}</td>
+        <td><input [(ngModel)]="product.cost"></td>
+        <td>
+          <app-product-rating [productCost]="product.cost" (message)='showMessage($event, product.id)'>
+          </app-product-rating>
+        </td>
+        <td>{{ product.commnents }}</td>
+    </tbody>
+  </table>
+</div>
